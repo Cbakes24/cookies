@@ -7,25 +7,23 @@ function storeTheme(themeName) {
 
 // For restoring theme from cookies, if selected by the user in the past
 function restoreTheme() {
-  let theme = document.cookie.split('=')[1]
-  console.log(theme, 'themeee')
-  if(theme){
-    setTheme(theme)
+  let theme = document.cookie.split("=")[1];
+  console.log(theme, "themeee");
+  if (theme) {
+    setTheme(theme);
   }
 }
 
 // For clearing theme selection from cookies (reset to default)
 function clearTheme() {
-
-document.cookie = "theme=; max-age=0";
-
+  document.cookie = "theme=; max-age=0";
 }
 
 /* ================================ PHASE 3 ================================ */
 
 // For storing user's display name in cookies
 function storeName(displayName) {
-  // Your code here
+  document.cookie = `name=${displayName}`;
 }
 
 // For restoring user's display name from cookies, if set in the past
